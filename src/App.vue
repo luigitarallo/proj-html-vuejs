@@ -1,17 +1,19 @@
 <script>
-// import MyComponent from "./components/MyComponent.vue";
+import AppHeader from "./components/AppHeader.vue";
+import AppMain from "./components/AppMain.vue";
 
 export default {
   data() {
     return {};
   },
 
-  // components: {
-  //   MyComponent,
-  // },
+  components: { AppHeader, AppMain },
 };
 </script>
 
-<template></template>
+<template>
+  <AppHeader />
+  <AppMain />
+</template>
 
 <style lang="scss" scoped></style>

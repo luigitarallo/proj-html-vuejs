@@ -1,0 +1,33 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+// RESET
+
+ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// BUTTON STYLE
+.yellow-btn {
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 200;
+  background-color: $brand-color;
+  color: $muted-gray;
+}
+
+.gray-btn {
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 200;
+  padding: 0.2rem 1.5rem;
+  background-color: $muted-gray;
+  color: $smoky-white;
+}
