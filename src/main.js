@@ -11,8 +11,19 @@ import { faBuilding } from "@fortawesome/free-solid-svg-icons";
 import { faArrowsRotate } from "@fortawesome/free-solid-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faTruck } from "@fortawesome/free-solid-svg-icons";
+import { faSuitcase } from "@fortawesome/free-solid-svg-icons";
+import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faBuilding, faArrowsRotate, faHouse, faTruck);
+library.add(
+  faBuilding,
+  faArrowsRotate,
+  faHouse,
+  faTruck,
+  faSuitcase,
+  faUsers,
+  faGlobe
+);
 
 import App from "./App.vue";
 const app = createApp(App);
