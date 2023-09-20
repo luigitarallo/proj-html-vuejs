@@ -14,6 +14,8 @@ import { faTruck } from "@fortawesome/free-solid-svg-icons";
 import { faSuitcase } from "@fortawesome/free-solid-svg-icons";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   faBuilding,
@@ -22,7 +24,9 @@ library.add(
   faTruck,
   faSuitcase,
   faUsers,
-  faGlobe
+  faGlobe,
+  faLink,
+  faMagnifyingGlass
 );
 
 import App from "./App.vue";

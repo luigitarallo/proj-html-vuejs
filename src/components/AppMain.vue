@@ -53,8 +53,9 @@ export default {
     <div class="bordered-text-container">
       <h2>Specialist in Modern Costruction</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel tempore
-        fuga at sed rem accusantium fugit nam. Optio, error eius.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        laborum mollitia at in temporibus accusamus obcaecati dolor distinctio
+        dolore porro.
       </p>
     </div>
     <div class="simple-card-container">
@@ -178,12 +179,126 @@ export default {
       </div>
     </div>
   </section>
+
+  <!-- Recentent works -->
+  <section>
+    <div class="container">
+      <!-- Recent Works Catch Phrase -->
+      <div class="bordered-text-container">
+        <h2>Explore Recente Work</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          laborum mollitia at in temporibus accusamus obcaecati dolor distinctio
+          dolore porro.
+        </p>
+      </div>
+      <!-- Recent works Card -->
+      <div class="container d-flex my-5">
+        <div class="work-flip-card">
+          <div class="work-flip-card-inner">
+            <div class="work-flip-card-front">
+              <img
+                src="/img/project2-featured-15013609-400x400.jpg"
+                alt="florida project"
+              />
+            </div>
+            <div class="work-flip-card-back">
+              <div class="d-flex">
+                <div class="icon-container">
+                  <font-awesome-icon icon="fa-solid fa-link" class="icon" />
+                </div>
+                <div class="icon-container">
+                  <font-awesome-icon
+                    icon="fa-solid fa-magnifying-glass"
+                    class="icon"
+                  />
+                </div>
+              </div>
+              <h4>Florida Heath Facility</h4>
+              <span>Commercial</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-flip-card">
+          <div class="work-flip-card-inner">
+            <div class="work-flip-card-front">
+              <img
+                src="/img/project1-featured-294276386-400x400.jpg"
+                alt="florida project"
+              />
+            </div>
+            <div class="work-flip-card-back">
+              <div class="d-flex">
+                <div class="icon-container">
+                  <font-awesome-icon icon="fa-solid fa-link" class="icon" />
+                </div>
+                <div class="icon-container">
+                  <font-awesome-icon
+                    icon="fa-solid fa-magnifying-glass"
+                    class="icon"
+                  />
+                </div>
+              </div>
+              <h4>Florida Heath Facility</h4>
+              <span>Commercial</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-flip-card">
+          <div class="work-flip-card-inner">
+            <div class="work-flip-card-front">
+              <img
+                src="/img/project3-featured-189023420-400x400.jpg"
+                alt="florida project"
+              />
+            </div>
+            <div class="work-flip-card-back">
+              <div class="d-flex">
+                <div class="icon-container">
+                  <font-awesome-icon icon="fa-solid fa-link" class="icon" />
+                </div>
+                <div class="icon-container">
+                  <font-awesome-icon
+                    icon="fa-solid fa-magnifying-glass"
+                    class="icon"
+                  />
+                </div>
+              </div>
+              <h4>Florida Heath Facility</h4>
+              <span>Commercial</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="works-link">
+        <a href="#">VIEW ALL PROJECTS</a>
+      </p>
+    </div>
+  </section>
+  <section></section>
 </template>
 
 <style lang="scss" scoped>
 @use "../assets/scss/general.scss" as *;
 @use "../assets/scss/partials/variables" as *;
 @use "../assets/scss/partials/mixins" as *;
+
+// UTILS
+// Catch Phrase Bordered
+
+.bordered-text-container {
+  @include column-flexed;
+  h2 {
+    @include bordered-bottom-txt;
+
+    &:after {
+      @include after-border;
+    }
+  }
+  p {
+    @include bordered-bottom-p;
+  }
+}
 
 // Section Jumbotron
 .jumbotron {
@@ -246,44 +361,24 @@ export default {
   }
 }
 
-// Section Specialization
-.specialization-section {
-  .bordered-text-container {
-    @include column-flexed;
-    h2 {
-      @include bordered-bottom-txt;
-
-      &:after {
-        @include after-border;
-      }
-    }
-    p {
-      @include bordered-bottom-p;
-    }
-  }
-}
 // Section Specialization CARD
 .simple-card-container {
   margin: 5rem 6rem;
   display: flex;
   justify-content: center;
+
+  // Container Card
   .flip-card {
-    background-color: transparent;
+    @include flip-card-external;
     width: 400px;
     height: 300px;
-    perspective: 1000px;
     margin-right: 2rem;
   }
-  /* This container is needed to position the front and back side */
+  // Content Card
   .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+    @include flip-inner-card;
   }
-  // Flip Card Specialization
+
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
@@ -291,10 +386,7 @@ export default {
   .flip-card-front,
   .flip-card-back {
     @include column-flexed;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
+    @include flip-card-faces;
     padding: 1rem;
   }
 
@@ -363,6 +455,74 @@ export default {
       font-size: 1.2rem;
       font-weight: 600;
     }
+  }
+}
+
+// Recent Works Card
+.work-flip-card {
+  @include flip-card-external;
+  width: 400px;
+  height: 400px;
+  margin: 0 1rem;
+}
+.work-flip-card-inner {
+  @include flip-inner-card;
+}
+.work-flip-card:hover .work-flip-card-inner {
+  transform: rotateY(180deg);
+}
+.work-flip-card-front,
+.work-flip-card-back {
+  @include column-flexed;
+  @include flip-card-faces;
+  padding: 1rem;
+}
+.work-flip-card-back {
+  transform: rotateY(180deg);
+  background-color: $brand-color;
+  h4 {
+    color: $brilliant-white;
+    margin: 0.7rem 0;
+    font-weight: 100;
+  }
+  span {
+    color: $brilliant-white;
+  }
+
+  .icon-container {
+    height: 50px;
+    width: 50px;
+    background-color: $brilliant-white;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      color: $brand-color;
+    }
+  }
+}
+
+.works-link {
+  text-align: center;
+  margin: 5rem 0;
+  color: $muted-gray;
+  &::before {
+    content: "";
+    border: 1px solid $smoky-white;
+    margin-bottom: 1.5rem;
+    width: 200px;
+    display: inline-block;
+    margin-right: 10rem;
+  }
+  &::after {
+    content: "";
+    border: 1px solid $smoky-white;
+    margin-top: 1.5rem;
+    width: 200px;
+    display: inline-block;
+    margin-left: 10rem;
   }
 }
 </style>

@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-// Mixin for catch phrase block
+// For catch phrase block with border
 @mixin bordered-bottom-txt {
   display: flex;
   flex-direction: column;
@@ -28,4 +28,26 @@
   text-align: center;
   margin-top: 2rem;
   color: $muted-gray;
+}
+
+// For flip card
+@mixin flip-card-external {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+@mixin flip-inner-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+@mixin flip-card-faces {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
