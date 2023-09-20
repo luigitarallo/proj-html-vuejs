@@ -3,14 +3,14 @@
 
 export default {
   props: {
-    primaryBtn: String,
+    styleBtn: String,
     text: String,
   },
 };
 </script>
 
 <template>
-  <button :class="primaryBtn">{{ text }}</button>
+  <button :class="styleBtn">{{ text }}</button>
 </template>
 
 <style lang="scss" scoped></style>

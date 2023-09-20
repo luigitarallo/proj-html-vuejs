@@ -46,7 +46,7 @@ export default {
             </a>
           </li>
         </ul>
-        <Button :primaryBtn="yellowBtn" :text="getTextBtn"></Button>
+        <Button :styleBtn="yellowBtn" :text="getTextBtn"></Button>
       </div>
     </nav>
   </header>
@@ -88,11 +88,6 @@ nav {
   .yellow-btn {
     font-size: 0.9rem;
     padding: 0.5rem 1.5rem;
-
-    &:hover {
-      background-color: $dark-gray;
-      color: $brilliant-white;
-    }
   }
 }
 </style>
