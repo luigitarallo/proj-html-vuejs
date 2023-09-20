@@ -9,6 +9,8 @@ export default {
       grayBtn: "gray-btn",
       exploreText: "EXPLORE RECENT WORK",
       getFreeText: "GET A FREE QUOTE",
+      smallYellowBtn: "small-yellow-btn",
+      smallBtnText: "small-btn-text",
     };
   },
   emits: ["getClicked", "exploreClicked", "getFreeQuote"],
@@ -54,6 +56,99 @@ export default {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel tempore
         fuga at sed rem accusantium fugit nam. Optio, error eius.
       </p>
+    </div>
+    <div class="simple-card-container">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="round-icon">
+              <font-awesome-icon icon="fa-solid fa-building" class="icon" />
+            </div>
+            <h3>Buildings</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dicta
+              earum fugit aut facilis tempore?
+            </p>
+          </div>
+          <div class="flip-card-back">
+            <h3>ARTFULLY CRAFTED</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Corrupti, tenetur?
+            </p>
+            <button class="card-button">GET A QUOTE</button>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="round-icon">
+              <font-awesome-icon
+                icon="fa-solid fa-arrows-rotate"
+                class="icon"
+              />
+            </div>
+            <h3>Renovate</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dicta
+              earum fugit aut facilis tempore?
+            </p>
+          </div>
+          <div class="flip-card-back">
+            <h3>ARTFULLY CRAFTED</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Corrupti, tenetur?
+            </p>
+            <button class="card-button">GET A QUOTE</button>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="round-icon">
+              <font-awesome-icon icon="fa-solid fa-house" class="icon" />
+            </div>
+            <h3>Costruct</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dicta
+              earum fugit aut facilis tempore?
+            </p>
+          </div>
+          <div class="flip-card-back">
+            <h3>ARTFULLY CRAFTED</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Corrupti, tenetur?
+            </p>
+            <button class="card-button">GET A QUOTE</button>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="round-icon">
+              <font-awesome-icon icon="fa-solid fa-truck" class="icon" />
+            </div>
+            <h3>Exclusive</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dicta
+              earum fugit aut facilis tempore?
+            </p>
+          </div>
+          <div class="flip-card-back">
+            <h3>ARTFULLY CRAFTED</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Corrupti, tenetur?
+            </p>
+            <button class="card-button">GET A QUOTE</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -137,6 +232,82 @@ export default {
     }
     p {
       @include bordered-bottom-p;
+    }
+  }
+}
+
+.simple-card-container {
+  margin: 5rem 6rem;
+  display: flex;
+  justify-content: center;
+  .flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 300px;
+    perspective: 1000px;
+    margin-right: 2rem;
+  }
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  // Flip Card Specialization
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    @include column-flexed;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    padding: 1rem;
+  }
+
+  .flip-card-front {
+    background-color: $smoky-white;
+    color: black;
+    border-radius: 5px;
+    .round-icon {
+      border-radius: 50%;
+      border: 1px solid $muted-gray;
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon {
+      font-size: 2rem;
+      color: $muted-gray;
+    }
+    h3 {
+      font-size: 2.5rem;
+      margin: 1rem 0;
+      color: $muted-gray;
+      font-weight: 200;
+    }
+    p {
+      font-size: 1rem;
+      color: $muted-gray;
+    }
+  }
+
+  .flip-card-back {
+    background-color: $brand-color;
+    color: $muted-gray;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+    .card-button {
+      background-color: #ffdc6b;
+      border: none;
     }
   }
 }
