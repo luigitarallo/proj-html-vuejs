@@ -151,6 +151,33 @@ export default {
       </div>
     </div>
   </section>
+  <!-- Results -->
+  <section>
+    <div class="results-container">
+      <div class="container d-flex justify-content-around align-items-center">
+        <div class="results">
+          <font-awesome-icon icon="fa-solid fa-suitcase" class="result-icon" />
+          <span class="result-number">3534</span>
+          <p>PLANNING APPLICATIONS</p>
+        </div>
+        <div class="results">
+          <font-awesome-icon icon="fa-solid fa-building" class="result-icon" />
+          <span class="result-number">896</span>
+          <p>COMPLETED PROJECTS</p>
+        </div>
+        <div class="results">
+          <font-awesome-icon icon="fa-solid fa-users" class="result-icon" />
+          <span class="result-number">172</span>
+          <p>TRAINED PROFESSIONALS</p>
+        </div>
+        <div class="results">
+          <font-awesome-icon icon="fa-solid fa-globe" class="result-icon" />
+          <span class="result-number">19</span>
+          <p>INTERNATIONAL OFFICES</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -235,7 +262,7 @@ export default {
     }
   }
 }
-
+// Section Specialization CARD
 .simple-card-container {
   margin: 5rem 6rem;
   display: flex;
@@ -308,6 +335,33 @@ export default {
     .card-button {
       background-color: #ffdc6b;
       border: none;
+    }
+  }
+}
+
+// Results section
+.results-container {
+  background-image: url(/img/home-244125289.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  .container {
+    height: 100%;
+  }
+  .results {
+    @include column-flexed;
+    .result-icon {
+      font-size: 5rem;
+      color: $brand-color;
+    }
+    .result-number {
+      font-size: 4rem;
+      color: $brand-color;
+    }
+    p {
+      color: $brilliant-white;
+      font-size: 1.2rem;
+      font-weight: 600;
     }
   }
 }
