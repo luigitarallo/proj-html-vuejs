@@ -153,45 +153,44 @@ export default {
     </div>
   </section>
   <!-- Results -->
-  <section>
-    <div class="results-container">
-      <div class="container d-flex justify-content-around align-items-center">
-        <div class="results">
-          <font-awesome-icon icon="fa-solid fa-suitcase" class="result-icon" />
-          <span class="result-number">3534</span>
-          <p>PLANNING APPLICATIONS</p>
-        </div>
-        <div class="results">
-          <font-awesome-icon icon="fa-solid fa-building" class="result-icon" />
-          <span class="result-number">896</span>
-          <p>COMPLETED PROJECTS</p>
-        </div>
-        <div class="results">
-          <font-awesome-icon icon="fa-solid fa-users" class="result-icon" />
-          <span class="result-number">172</span>
-          <p>TRAINED PROFESSIONALS</p>
-        </div>
-        <div class="results">
-          <font-awesome-icon icon="fa-solid fa-globe" class="result-icon" />
-          <span class="result-number">19</span>
-          <p>INTERNATIONAL OFFICES</p>
-        </div>
+  <section class="results-container">
+    <div class="container d-flex justify-content-around align-items-center">
+      <div class="results">
+        <font-awesome-icon icon="fa-solid fa-suitcase" class="result-icon" />
+        <span class="result-number">3534</span>
+        <p>PLANNING APPLICATIONS</p>
+      </div>
+      <div class="results">
+        <font-awesome-icon icon="fa-solid fa-building" class="result-icon" />
+        <span class="result-number">896</span>
+        <p>COMPLETED PROJECTS</p>
+      </div>
+      <div class="results">
+        <font-awesome-icon icon="fa-solid fa-users" class="result-icon" />
+        <span class="result-number">172</span>
+        <p>TRAINED PROFESSIONALS</p>
+      </div>
+      <div class="results">
+        <font-awesome-icon icon="fa-solid fa-globe" class="result-icon" />
+        <span class="result-number">19</span>
+        <p>INTERNATIONAL OFFICES</p>
       </div>
     </div>
   </section>
 
   <!-- Recentent works -->
   <section>
+    <div class="bordered-text-container">
+      <h2>Explore Recente Work</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        laborum mollitia at in temporibus accusamus obcaecati dolor distinctio
+        dolore porro.
+      </p>
+    </div>
     <div class="container">
       <!-- Recent Works Catch Phrase -->
-      <div class="bordered-text-container">
-        <h2>Explore Recente Work</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-          laborum mollitia at in temporibus accusamus obcaecati dolor distinctio
-          dolore porro.
-        </p>
-      </div>
+
       <!-- Recent works Card -->
       <div class="container d-flex my-5">
         <div class="work-flip-card">
@@ -275,7 +274,80 @@ export default {
       </p>
     </div>
   </section>
-  <section></section>
+  <!-- Core Values -->
+  <section class="core-value-section">
+    <div class="bordered-text-container">
+      <h2>Our Core Values</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        laborum mollitia at in temporibus accusamus obcaecati dolor distinctio
+        dolore porro.
+      </p>
+    </div>
+    <div class="container my-5">
+      <div class="d-flex justify-content-around align-items-center">
+        <!-- Values col -->
+        <div class="value-col">
+          <span class="house-icon-container"
+            ><font-awesome-icon icon="fa-solid fa-house" class="value-icon"
+          /></span>
+          <h6>Great Services</h6>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            magni enim a, dolorem ut soluta.
+          </p>
+        </div>
+        <div class="value-col">
+          <span class="sun-icon-container"
+            ><font-awesome-icon icon="fa-regular fa-sun" class="value-icon"
+          /></span>
+          <h6>Great Services</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            magni enim a, dolorem ut soluta.
+          </p>
+        </div>
+        <div class="value-col">
+          <span class="users-icon-container"
+            ><font-awesome-icon icon="fa-solid fa-users" class="value-icon"
+          /></span>
+          <h6>Great Services</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            magni enim a, dolorem ut soluta.
+          </p>
+        </div>
+        <div class="value-col">
+          <span class="bulb-icon-container"
+            ><font-awesome-icon
+              icon="fa-regular fa-lightbulb"
+              class="value-icon"
+          /></span>
+          <h6>Great Services</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            magni enim a, dolorem ut soluta.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Users Feedback -->
+  <section class="feedback-section">
+    <div class="bordered-text-container">
+      <h2>Our Home Owners Say</h2>
+    </div>
+    <div class="img-container">
+      <img src="/img/home-testimonial-113165296.jpg" alt="testimonial" />
+    </div>
+    <p>
+      "No man but feels more of a man in the world if he have but a bit of
+      ground that he can call his own. However small it is on the surface, it is
+      foru thousand miles deep; and that is a very handsome property."
+    </p>
+    <span>HARRY SMITH &sdot; NEW HOME OWNER</span>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -523,6 +595,146 @@ export default {
     width: 200px;
     display: inline-block;
     margin-left: 10rem;
+  }
+}
+
+// Core Values
+.core-value-section {
+  background-color: $smoky-white;
+  .value-col {
+    @include column-flexed;
+    width: calc(100% / 4);
+    padding: 1rem;
+
+    h6 {
+      padding: 1.5rem 0;
+      text-align: center;
+      position: relative;
+      color: $muted-gray;
+      font-weight: 200;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        translate: (-50%);
+
+        border: 1px solid $muted-gray;
+
+        width: 20px;
+      }
+    }
+    p {
+      margin-top: 1rem;
+      text-align: center;
+    }
+  }
+
+  .house-icon-container {
+    border-radius: 50%;
+    background-color: $aqua-icon;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: $brand-color;
+    }
+    &:hover ~ h6 {
+      color: $brand-color;
+    }
+  }
+  .sun-icon-container {
+    border-radius: 50%;
+    background-color: $blue-icon;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: $brand-color;
+    }
+    &:hover ~ h6 {
+      color: $brand-color;
+    }
+  }
+
+  .users-icon-container {
+    border-radius: 50%;
+    background-color: $orange-icon;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: $brand-color;
+    }
+    &:hover ~ h6 {
+      color: $brand-color;
+    }
+  }
+
+  .bulb-icon-container {
+    border-radius: 50%;
+    background-color: $green-icon;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: $brand-color;
+    }
+    &:hover ~ h6 {
+      color: $brand-color;
+    }
+  }
+
+  .value-icon {
+    font-size: 5rem;
+    color: $brilliant-white;
+  }
+}
+
+// Users Feedback
+.feedback-section {
+  background-image: url(/img/home-parallax-144609983.jpg);
+  height: 600px;
+  background-position: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+
+  .bordered-text-container {
+    color: $brilliant-white;
+    h2 {
+      font-weight: 400;
+    }
+  }
+  p {
+    width: 50%;
+    text-align: center;
+    font-weight: 400;
+    color: $brilliant-white;
+    margin: 1.5rem 0;
+    font-size: 1.4rem;
+    font-style: italic;
+  }
+  .img-container {
+    margin-top: 1rem;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  span {
+    font-size: 1.4rem;
+    color: $brilliant-white;
+    font-weight: 600;
   }
 }
 </style>
