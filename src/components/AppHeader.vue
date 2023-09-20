@@ -30,6 +30,7 @@ export default {
       ],
     };
   },
+  emits: ["click"],
   components: { Button },
 };
 </script>
@@ -46,7 +47,11 @@ export default {
             </a>
           </li>
         </ul>
-        <Button :styleBtn="yellowBtn" :text="getTextBtn"></Button>
+        <Button
+          @click="$emit('click')"
+          :styleBtn="yellowBtn"
+          :text="getTextBtn"
+        ></Button>
       </div>
     </nav>
   </header>

@@ -8,12 +8,30 @@ export default {
   },
 
   components: { AppHeader, AppMain },
+  methods: {
+    clicked() {
+      console.log("I'm clicked!");
+    },
+    getClicked() {
+      console.log("Get me!");
+    },
+    exploreClicked() {
+      console.log("Exploring me!");
+    },
+    freeQuoteMe() {
+      console.log("Get a free quote!");
+    },
+  },
 };
 </script>
 
 <template>
-  <AppHeader />
-  <AppMain />
+  <AppHeader @click="clicked" />
+  <AppMain
+    @getClicked="getClicked"
+    @exploreClicked="exploreClicked"
+    @getFreeQuote="freeQuoteMe"
+  />
 </template>
 
 <style lang="scss" scoped></style>
