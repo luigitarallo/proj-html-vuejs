@@ -399,7 +399,27 @@ export default {
     </div>
   </section>
   <!-- Trusted partners -->
-  <section></section>
+  <section class="partners-container">
+    <div class="container">
+      <div class="bordered-text-container">
+        <h2>Trusted Partners</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          laborum mollitia at in temporibus accusamus obcaecati dolor distinctio
+          dolore porro.
+        </p>
+      </div>
+      <div class="partner-list">
+        <ul class="d-flex">
+          <li><img src="/img/home-logo1-219096700-320x202.png" alt="" /></li>
+          <li><img src="/img/home-logo2-219096700-320x202.png" alt="" /></li>
+          <li><img src="/img/home-logo9-219096700-320x202.png" alt="" /></li>
+          <li><img src="/img/home-logo10-219096700-320x202.png" alt="" /></li>
+          <li><img src="/img/home-logo11-219096700-320x202.png" alt="" /></li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <!-- Inspiring Spaces -->
   <section
     class="inspiring-spaces-section d-flex align-items-center justify-content-center"
@@ -821,6 +841,19 @@ export default {
 
 .blog-section {
   background-color: $smoky-white;
+}
+
+// Partners
+.partners-container {
+  margin: 5rem 0;
+}
+
+.partner-list {
+  li {
+    img {
+      max-width: 100%;
+    }
+  }
 }
 
 // Inspiring spaces
