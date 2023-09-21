@@ -366,7 +366,7 @@ export default {
               <div class="news-card-front">
                 <img src="/img/blog-post-134132600-800x482.jpg" alt="" />
               </div>
-              <div class="news-card-back">
+              <div class="news-card-back p-3">
                 <div class="d-flex justify-content-center">
                   <div class="icon-container">
                     <font-awesome-icon icon="fa-solid fa-link" class="icon" />
@@ -390,7 +390,7 @@ export default {
               <div class="news-card-front">
                 <img src="/img/blog-post-92486644-800x482.jpg" alt="" />
               </div>
-              <div class="news-card-back">
+              <div class="news-card-back p-3">
                 <div class="d-flex justify-content-center">
                   <div class="icon-container">
                     <font-awesome-icon icon="fa-solid fa-link" class="icon" />
@@ -414,7 +414,7 @@ export default {
               <div class="news-card-front">
                 <img src="/img/blog-post-332773904-600x362.jpg" alt="Avatar" />
               </div>
-              <div class="news-card-back">
+              <div class="news-card-back p-3">
                 <div class="d-flex justify-content-center">
                   <div class="icon-container">
                     <font-awesome-icon icon="fa-solid fa-link" class="icon" />
@@ -433,6 +433,9 @@ export default {
           </div>
         </div>
       </div>
+      <p class="works-link">
+        <a href="#">VIEW ALL ARTICLES</a>
+      </p>
     </div>
   </section>
   <!-- Trusted partners -->
