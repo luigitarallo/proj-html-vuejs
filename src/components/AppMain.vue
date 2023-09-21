@@ -358,42 +358,79 @@ export default {
         dolore porro.
       </p>
     </div>
-    <div class="container d-flex justify-content-center align-items-center">
-      <div class="row col-3">
-        <div class="col">
-          <div class="card-container">
-            <div class="work-flip-card">
-              <div class="work-flip-card-inner">
-                <div class="work-flip-card-front">
-                  <img
-                    src="/img/project2-featured-15013609-400x400.jpg"
-                    alt="florida project"
-                  />
-                </div>
-                <div class="work-flip-card-back">
-                  <div class="d-flex">
-                    <div class="icon-container">
-                      <font-awesome-icon icon="fa-solid fa-link" class="icon" />
-                    </div>
-                    <div class="icon-container">
-                      <font-awesome-icon
-                        icon="fa-solid fa-magnifying-glass"
-                        class="icon"
-                      />
-                    </div>
+    <div class="container-card">
+      <div class="cards d-flex justify-content-center">
+        <div class="card mx-2">
+          <div class="news-card">
+            <div class="news-card-inner">
+              <div class="news-card-front">
+                <img src="/img/blog-post-134132600-800x482.jpg" alt="" />
+              </div>
+              <div class="news-card-back">
+                <div class="d-flex">
+                  <div class="icon-container">
+                    <font-awesome-icon icon="fa-solid fa-link" class="icon" />
                   </div>
-                  <h4>Florida Heath Facility</h4>
-                  <span>Commercial</span>
+                  <div class="icon-container">
+                    <font-awesome-icon
+                      icon="fa-solid fa-magnifying-glass"
+                      class="icon"
+                    />
+                  </div>
                 </div>
+                <h4>Florida Heath Facility</h4>
+                <span>Commercial</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div></div>
+        <div class="card mx-2">
+          <div class="news-card">
+            <div class="news-card-inner">
+              <div class="news-card-front">
+                <img src="/img/blog-post-134132600-800x482.jpg" alt="" />
+              </div>
+              <div class="news-card-back">
+                <div class="d-flex">
+                  <div class="icon-container">
+                    <font-awesome-icon icon="fa-solid fa-link" class="icon" />
+                  </div>
+                  <div class="icon-container">
+                    <font-awesome-icon
+                      icon="fa-solid fa-magnifying-glass"
+                      class="icon"
+                    />
+                  </div>
+                </div>
+                <h4>Florida Heath Facility</h4>
+                <span>Commercial</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col">
-          <div></div>
+        <div class="card mx-2">
+          <div class="news-card">
+            <div class="news-card-inner">
+              <div class="news-card-front">
+                <img src="/img/blog-post-134132600-800x482.jpg" alt="Avatar" />
+              </div>
+              <div class="news-card-back">
+                <div class="d-flex">
+                  <div class="icon-container">
+                    <font-awesome-icon icon="fa-solid fa-link" class="icon" />
+                  </div>
+                  <div class="icon-container">
+                    <font-awesome-icon
+                      icon="fa-solid fa-magnifying-glass"
+                      class="icon"
+                    />
+                  </div>
+                </div>
+                <h4>Florida Heath Facility</h4>
+                <span>Commercial</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -841,6 +878,51 @@ export default {
 
 .blog-section {
   background-color: $smoky-white;
+  height: 800px;
+
+  .news-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+
+    perspective: 1000px;
+  }
+
+  .news-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .news-card:hover .news-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .news-card-front,
+  .news-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .news-card-front {
+    width: 300px;
+    height: 200px;
+    img {
+      width: 300px;
+      height: 200px;
+    }
+  }
+
+  .news-card-back {
+    background-color: $brand-color;
+    color: white;
+    transform: rotateY(180deg);
+  }
 }
 
 // Partners
