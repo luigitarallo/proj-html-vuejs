@@ -942,7 +942,7 @@ export default {
 
 // Partners
 .partners-container {
-  margin: 5rem 0;
+  margin: 3rem 0;
 }
 
 .partner-list {
