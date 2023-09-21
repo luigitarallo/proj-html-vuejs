@@ -22,6 +22,9 @@ import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faPhoneFlip } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   faBuilding,
@@ -38,7 +41,10 @@ library.add(
   faFacebookF,
   faTwitter,
   faYoutube,
-  faInstagram
+  faInstagram,
+  faPhoneFlip,
+  faEnvelope,
+  faClock
 );
 
 import App from "./App.vue";

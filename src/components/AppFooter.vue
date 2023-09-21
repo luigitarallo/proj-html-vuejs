@@ -1,12 +1,20 @@
 <script>
 import Button from "./baseComponents/Button.vue";
 
+// icon from font awesome
 import {
   faFacebookF,
   faTwitter,
   faYoutube,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  faClock,
+  faGlobe,
+  faPhoneFlip,
+  faHouse,
+} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 export default {
   data() {
@@ -60,6 +68,33 @@ export default {
         },
       ],
       maps: [{ title: "FIND US", map: "/img/construction_map_pin.png", id: 1 }],
+      contactsCol: {
+        title: "CONTACT US TODAY",
+        contacts: [
+          {
+            icon: faGlobe,
+            text: "Corporate Location",
+            text2: "1600 Amphitheatre Parkway",
+            text3: "London WC1 1BA",
+            id: 1,
+          },
+          {
+            icon: faHouse,
+            text: "Residential Location",
+            text2: "9521 Broadsberry Avenue",
+            text3: "Paddington RC7 9ZA",
+            id: 2,
+          },
+          { icon: faPhoneFlip, text: "1.800.458.556 / 1.800.532.2112", id: 3 },
+          { icon: faEnvelope, text: "info@your-domain.com", id: 4 },
+          { icon: faClock, text: "Monday - Friday: 9:00 AM - 6:00 PM", id: 5 },
+          {
+            icon: faClock,
+            text: "Saturday - Sunday: 9:00 AM - 12:00 PM",
+            id: 6,
+          },
+        ],
+      },
     };
   },
   emits: ["learnMore"],
@@ -85,15 +120,27 @@ export default {
           </li>
         </ul>
       </div>
-      <div class="col">ciao</div>
       <div class="col">
+        <div class="d-flex">
+          <div>icon</div>
+          <div></div>
+        </div>
+      </div>
+      <div class="col">
+        <h3>{{ contactsCol.title }}</h3>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li
+            v-for="contact in contactsCol.contacts"
+            :key="contact.id"
+            class="d-flex"
+          >
+            <font-awesome-icon :icon="contact.icon" class="icon" />
+            <p>
+              <span>{{ contact.text }}</span>
+              <span>{{ contact.text2 }}</span>
+              <span>{{ contact.text3 }}</span>
+            </p>
+          </li>
         </ul>
       </div>
       <div v-for="map in maps" class="col">
@@ -139,6 +186,19 @@ export default {
     font-size: 1.2rem;
     margin-bottom: 1.2rem;
   }
+  .icon {
+    margin-right: 0.5rem;
+    color: rgb(139, 139, 139);
+    font-size: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    color: rgb(139, 139, 139);
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
   .brand-data {
     color: rgb(139, 139, 139);
     p {
@@ -151,7 +211,7 @@ export default {
     padding: 0.5rem 2rem;
   }
   .img-container {
-    width: 300px;
+    width: 315px;
     img {
       max-width: 100%;
     }
