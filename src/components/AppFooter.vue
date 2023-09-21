@@ -95,6 +95,20 @@ export default {
           },
         ],
       },
+      tweets: {
+        title: "LATEST TWEETS",
+        messages: [
+          {
+            profileIcon: "/img/profile-icon.png",
+            accountName: "Theme Fusion",
+            userAccount: "@Theme_Fusion",
+            tweetText:
+              "Do you need sublime WordPress hosting for your next website? Take advantage of exclusive partner offers that we have secured just for you, & launch your site in seconds with #avada on WP Engine hosting & get 30% Off This Black Friday",
+            tweetImg: "/img/tweet-image.jpeg",
+            twitterIcon: faTwitter,
+          },
+        ],
+      },
     };
   },
   emits: ["learnMore"],
@@ -121,9 +135,28 @@ export default {
         </ul>
       </div>
       <div class="col">
-        <div class="d-flex">
-          <div>icon</div>
-          <div></div>
+        <div class="message-container" v-for="message in tweets.messages">
+          <h3>{{ tweets.title }}</h3>
+          <div class="d-flex">
+            <div class="profile-container">
+              <div class="profile-img">
+                <img :src="message.profileIcon" alt="" />
+              </div>
+            </div>
+            <div class="d-flex flex-column">
+              <div class="d-flex justify-content-between">
+                <h4>{{ message.accountName }}</h4>
+                <span class="tweet-icon"
+                  ><font-awesome-icon :icon="message.twitterIcon"
+                /></span>
+              </div>
+              <h5>{{ message.userAccount }}</h5>
+              <p>{{ message.tweetText }}</p>
+              <div class="tweet-img">
+                <img :src="message.tweetImg" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col">
@@ -176,11 +209,14 @@ export default {
 @use "../assets/scss/partials/mixins" as *;
 
 .first-footer {
-  padding: 2rem 3rem;
+  height: 500px;
+  padding: 4rem 3rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background-color: $muted-gray;
+  .col {
+    margin-right: 2rem;
+  }
   h3 {
     color: $brand-color;
     font-size: 1.2rem;
@@ -205,21 +241,53 @@ export default {
       margin: 1rem 0;
     }
   }
+}
 
-  .yellow-btn {
-    font-size: 1rem;
-    padding: 0.5rem 2rem;
+.yellow-btn {
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+}
+.img-container {
+  width: 315px;
+  img {
+    max-width: 100%;
   }
-  .img-container {
-    width: 315px;
+}
+
+.message-container {
+  overflow-y: auto;
+  .tweet-icon {
+    color: #667580;
+  }
+  h4 {
+    color: $smoky-white;
+    font-size: 0.9rem;
+  }
+  h5 {
+    color: $smoky-white;
+    font-size: 0.7rem;
+  }
+  .profile-container {
+    width: 50%;
+    border-radius: 50%;
+    .profile-img {
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .tweet-img {
+    width: 100%;
     img {
       max-width: 100%;
     }
   }
 }
-.col {
-  margin-right: 2rem;
-}
+
+// Sub footer
 .sub-footer {
   background-color: $dark-gray;
   padding: 2rem 3rem;

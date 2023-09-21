@@ -398,6 +398,22 @@ export default {
       </div>
     </div>
   </section>
+  <!-- Inspiring Spaces -->
+  <section class="inspiring-spaces-section">
+    <div class="container d-flex">
+      <div>
+        <div class="bordered-text-container justify-content-start">
+          <h2>Latest News</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            laborum mollitia at in temporibus accusamus obcaecati dolor
+            distinctio dolore porro.
+          </p>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -796,5 +812,14 @@ export default {
 
 .blog-section {
   background-color: $smoky-white;
+}
+
+// Inspiring spaces
+.inspiring-spaces-section {
+  background-image: url(/img/about-call-to-action-57862405.jpg);
+  height: 500px;
+
+  background-position: center;
+  background-size: cover;
 }
 </style>
