@@ -271,6 +271,8 @@ export default {
     width: 50%;
     border-radius: 50%;
     .profile-img {
+      height: 45px;
+      width: 45px;
       border-radius: 50%;
       overflow: hidden;
 
