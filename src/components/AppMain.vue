@@ -358,7 +358,7 @@ export default {
         dolore porro.
       </p>
     </div>
-    <div class="container-card">
+    <div class="container-card my-5">
       <div class="cards d-flex justify-content-center">
         <div class="card mx-2">
           <div class="news-card">
@@ -367,7 +367,7 @@ export default {
                 <img src="/img/blog-post-134132600-800x482.jpg" alt="" />
               </div>
               <div class="news-card-back">
-                <div class="d-flex">
+                <div class="d-flex justify-content-center">
                   <div class="icon-container">
                     <font-awesome-icon icon="fa-solid fa-link" class="icon" />
                   </div>
@@ -388,10 +388,10 @@ export default {
           <div class="news-card">
             <div class="news-card-inner">
               <div class="news-card-front">
-                <img src="/img/blog-post-134132600-800x482.jpg" alt="" />
+                <img src="/img/blog-post-92486644-800x482.jpg" alt="" />
               </div>
               <div class="news-card-back">
-                <div class="d-flex">
+                <div class="d-flex justify-content-center">
                   <div class="icon-container">
                     <font-awesome-icon icon="fa-solid fa-link" class="icon" />
                   </div>
@@ -412,10 +412,10 @@ export default {
           <div class="news-card">
             <div class="news-card-inner">
               <div class="news-card-front">
-                <img src="/img/blog-post-134132600-800x482.jpg" alt="Avatar" />
+                <img src="/img/blog-post-332773904-600x362.jpg" alt="Avatar" />
               </div>
               <div class="news-card-back">
-                <div class="d-flex">
+                <div class="d-flex justify-content-center">
                   <div class="icon-container">
                     <font-awesome-icon icon="fa-solid fa-link" class="icon" />
                   </div>
@@ -922,6 +922,18 @@ export default {
     background-color: $brand-color;
     color: white;
     transform: rotateY(180deg);
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $brilliant-white;
+      .icon {
+        color: $brand-color;
+      }
+    }
   }
 }
 
