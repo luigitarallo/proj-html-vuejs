@@ -398,20 +398,29 @@ export default {
       </div>
     </div>
   </section>
+  <!-- Trusted partners -->
+  <section></section>
   <!-- Inspiring Spaces -->
-  <section class="inspiring-spaces-section">
-    <div class="container d-flex">
-      <div>
-        <div class="bordered-text-container justify-content-start">
-          <h2>Latest News</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-            laborum mollitia at in temporibus accusamus obcaecati dolor
-            distinctio dolore porro.
-          </p>
-        </div>
+  <section
+    class="inspiring-spaces-section d-flex align-items-center justify-content-center"
+  >
+    <div class="spaces-container">
+      <div class="w-50 d-flex flex-column">
+        <h2 class="text-light">Building Inspiring Spaces</h2>
+        <p class="text-light">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          laborum mollitia at in temporibus accusamus obcaecati dolor distinctio
+          dolore porro.
+        </p>
       </div>
-      <div></div>
+      <div>
+        <Button
+          @click="$emit('getFreeQuote')"
+          :styleBtn="yellowBtn"
+          :text="getText"
+        ></Button>
+        <p class="text-center text-light">Only takes a few seconds</p>
+      </div>
     </div>
   </section>
 </template>
@@ -821,5 +830,27 @@ export default {
 
   background-position: center;
   background-size: cover;
+
+  .spaces-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    h2 {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border: 1px solid $brand-color;
+        width: 150px;
+        margin: 1rem 0;
+      }
+    }
+    p {
+      margin-top: 2rem;
+    }
+  }
 }
 </style>
