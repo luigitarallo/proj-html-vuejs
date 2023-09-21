@@ -275,7 +275,7 @@ export default {
     </div>
   </section>
   <!-- Core Values -->
-  <section class="core-value-section">
+  <section class="core-value-section pb-5">
     <div class="bordered-text-container">
       <h2>Our Core Values</h2>
       <p>
@@ -284,7 +284,7 @@ export default {
         dolore porro.
       </p>
     </div>
-    <div class="container my-5">
+    <div class="container">
       <div class="d-flex justify-content-around align-items-center">
         <!-- Values col -->
         <div class="value-col">
@@ -347,6 +347,56 @@ export default {
       foru thousand miles deep; and that is a very handsome property."
     </p>
     <span>HARRY SMITH &sdot; NEW HOME OWNER</span>
+  </section>
+  <!-- Latest news -->
+  <section class="blog-section">
+    <div class="bordered-text-container">
+      <h2>Latest News</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        laborum mollitia at in temporibus accusamus obcaecati dolor distinctio
+        dolore porro.
+      </p>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="row col-3">
+        <div class="col">
+          <div class="card-container">
+            <div class="work-flip-card">
+              <div class="work-flip-card-inner">
+                <div class="work-flip-card-front">
+                  <img
+                    src="/img/project2-featured-15013609-400x400.jpg"
+                    alt="florida project"
+                  />
+                </div>
+                <div class="work-flip-card-back">
+                  <div class="d-flex">
+                    <div class="icon-container">
+                      <font-awesome-icon icon="fa-solid fa-link" class="icon" />
+                    </div>
+                    <div class="icon-container">
+                      <font-awesome-icon
+                        icon="fa-solid fa-magnifying-glass"
+                        class="icon"
+                      />
+                    </div>
+                  </div>
+                  <h4>Florida Heath Facility</h4>
+                  <span>Commercial</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div></div>
+        </div>
+        <div class="col">
+          <div></div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -641,6 +691,7 @@ export default {
     align-items: center;
     &:hover {
       background-color: $brand-color;
+      cursor: pointer;
     }
     &:hover ~ h6 {
       color: $brand-color;
@@ -656,6 +707,7 @@ export default {
     align-items: center;
     &:hover {
       background-color: $brand-color;
+      cursor: pointer;
     }
     &:hover ~ h6 {
       color: $brand-color;
@@ -672,6 +724,7 @@ export default {
     align-items: center;
     &:hover {
       background-color: $brand-color;
+      cursor: pointer;
     }
     &:hover ~ h6 {
       color: $brand-color;
@@ -688,6 +741,7 @@ export default {
     align-items: center;
     &:hover {
       background-color: $brand-color;
+      cursor: pointer;
     }
     &:hover ~ h6 {
       color: $brand-color;
@@ -736,5 +790,11 @@ export default {
     color: $brilliant-white;
     font-weight: 600;
   }
+}
+
+// Blog
+
+.blog-section {
+  background-color: $smoky-white;
 }
 </style>

@@ -1,13 +1,14 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
+import AppFooter from "./components/AppFooter.vue";
 
 export default {
   data() {
     return {};
   },
 
-  components: { AppHeader, AppMain },
+  components: { AppHeader, AppMain, AppFooter },
   methods: {
     clicked() {
       console.log("I'm clicked!");
@@ -21,6 +22,9 @@ export default {
     freeQuoteMe() {
       console.log("Get a free quote!");
     },
+    learnMore() {
+      console.log("Learn More!");
+    },
   },
 };
 </script>
@@ -32,6 +36,7 @@ export default {
     @exploreClicked="exploreClicked"
     @getFreeQuote="freeQuoteMe"
   />
+  <AppFooter @learnMore="learnMore" />
 </template>
 
 <style lang="scss" scoped></style>

@@ -18,6 +18,10 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-regular-svg-icons";
 import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
   faBuilding,
@@ -30,7 +34,11 @@ library.add(
   faLink,
   faMagnifyingGlass,
   faSun,
-  faLightbulb
+  faLightbulb,
+  faFacebookF,
+  faTwitter,
+  faYoutube,
+  faInstagram
 );
 
 import App from "./App.vue";
